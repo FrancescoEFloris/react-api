@@ -13,20 +13,19 @@ function GottaFetchEmAll() {
     }, []);
 
     return (
-        <div>
+        <div className="row">
             {actors.map((actor) => (
-                <div key={actor.id}>
+                <div key={actor.id} className="col actor-card">
                     <h2>{actor.name}</h2>
                     <img src={actor.image} alt={actor.biography} />
                     <p>{actor.birth_year} {actor.nationality}</p>
                     <p>{actor.biography}</p>
-                    <h4>Known For:</h4>
-                    <p>{actor.known_for}</p>
-                    <h4>Awards:</h4>
-                    <p>{actor.awards}</p>
+                    <h4 className="text-danger">Known For:</h4>
+                    <p className="text-danger">{actor.known_for}</p>
+                    <h4 className="text-warning">Awards:</h4>
+                    <p className="text-warning">{actor.awards}</p>
                 </div>
-            ))};
-
+            ))}
         </div>
     );
 };
