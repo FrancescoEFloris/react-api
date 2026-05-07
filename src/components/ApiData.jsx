@@ -21,9 +21,9 @@ function GottaFetchEmAll() {
                     <p>{actor.birth_year} {actor.nationality}</p>
                     <p>{actor.biography}</p>
                     <h4 className="text-danger">Known For:</h4>
-                    <p className="text-danger">{actor.known_for}</p>
+                    <p className="text-danger">{actor.known_for.join(", ")}</p>
                     <h4 className="text-warning">Awards:</h4>
-                    <p className="text-warning">{actor.awards}</p>
+                    <p className="text-warning">{actor.awards.join(", ")}</p>
                 </div>
             ))}
         </div>
